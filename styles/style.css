@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-auto-rows: 200px;
+  grid-gap: 10px;
+  list-style-type: none;
+}
+ul li {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+ul li:nth-child(1) {
+  background-color: red;
+  border: 1px solid red;
+  color: black;
+}
+ul li:nth-child(2) {
+  background-color: yellow;
+  border: 1px solid yellow;
+  color: black;
+}
+ul li:nth-child(3) {
+  background-color: green;
+  border: 1px solid green;
+  color: black;
+}
+ul li:nth-child(4) {
+  background-color: blue;
+  border: 1px solid blue;
+  color: white;
+}
+ul li:nth-child(5) {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
+ul li:nth-child(1):hover {
+  background-image: url("https://t4.ftcdn.net/jpg/02/52/93/81/360_F_252938192_JQQL8VoqyQVwVB98oRnZl83epseTVaHe.jpg");
+}
+ul li:nth-child(2):hover {
+  background-image: url("https://img.freepik.com/free-vector/banana-fruit-white-background-icon-isolated_24877-82900.jpg?semt=ais_hybrid");
+}
+ul li:nth-child(3):hover {
+  background-image: url("https://img.freepik.com/premium-vector/kiwi-food_997622-1185.jpg");
+}
+ul li:nth-child(4):hover {
+  background-image: url("https://img.freepik.com/premium-vector/branch-fresh-blueberries-with-green-leaves_1092570-4767.jpg?semt=ais_hybrid");
+}
+ul li:nth-child(5):hover {
+  background-image: url("https://img.freepik.com/premium-vector/blackberry-fruit-berry-summer-cartoon-style-white-background_144356-21871.jpg");
+}
+ul li:hover {
+  transform: scale(1.1);
+}
+
+
+
+/*# sourceMappingURL=style.css.map */

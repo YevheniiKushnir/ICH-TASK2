@@ -1,0 +1,61 @@
+$sizeCard: 200px;
+$colors: red, yellow, green, blue, black;
+$urlImg: 'https://t4.ftcdn.net/jpg/02/52/93/81/360_F_252938192_JQQL8VoqyQVwVB98oRnZl83epseTVaHe.jpg',
+	'https://img.freepik.com/free-vector/banana-fruit-white-background-icon-isolated_24877-82900.jpg?semt=ais_hybrid',
+	'https://img.freepik.com/premium-vector/kiwi-food_997622-1185.jpg',
+	'https://img.freepik.com/premium-vector/branch-fresh-blueberries-with-green-leaves_1092570-4767.jpg?semt=ais_hybrid',
+	'https://img.freepik.com/premium-vector/blackberry-fruit-berry-summer-cartoon-style-white-background_144356-21871.jpg';
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+ul {
+	display: grid;
+	grid-template-columns: repeat(5, $sizeCard);
+	grid-auto-rows: $sizeCard;
+	grid-gap: 10px;
+	list-style-type: none;
+
+	li {
+		cursor: pointer;
+		transition: all 0.3s ease;
+		font-size: 32px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-size: cover;
+		background-position: center;
+
+		@for $i from 1 through length($colors) {
+			&:nth-child(#{$i}) {
+				background-color: nth($colors, $i);
+				border: 1px solid nth($colors, $i);
+
+				color: if(
+					nth($colors, $i) == blue or nth($colors, $i) == black,
+					white,
+					black
+				);
+			}
+		}
+
+		@for $i from 1 through length($urlImg) {
+			&:nth-child(#{$i}) {
+				&:hover {
+					background-image: url(nth($urlImg, $i));
+				}
+			}
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+/*# sourceMappingURL=style.scss.map */
